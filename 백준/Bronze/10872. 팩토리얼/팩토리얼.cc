@@ -1,11 +1,15 @@
 #include <iostream>
 using namespace std;
-int main() {
-    int n, i, result = 1;
-    scanf("%d", &n);
-    for(i=n;i>0;i--) {
-        result *= i;
+int factorial (int n) {
+    if(n<=1) {
+        return 1;
     }
+    return n*factorial(n-1);
+}
+int main() {
+    int n, result;
+    scanf("%d", &n);
+    result = factorial(n);
     printf("%d\n", result);
     return 0;
 }
