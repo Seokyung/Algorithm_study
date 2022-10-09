@@ -1,6 +1,5 @@
 //15649 N과 M(1)
 #include <iostream>
-#include <vector>
 using namespace std;
 
 #define MAX 9
