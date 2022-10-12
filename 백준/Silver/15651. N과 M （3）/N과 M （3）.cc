@@ -6,7 +6,6 @@ using namespace std;
 
 int n, m;
 int result[MAX];
-bool visited[MAX];
 
 void print(int res[]) {
     for(int i=0;i<m;i++) {
