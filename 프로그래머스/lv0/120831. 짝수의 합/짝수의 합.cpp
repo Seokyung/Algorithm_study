@@ -11,5 +11,6 @@ int solution(int n) {
             answer += i;
         }
     }
+    
     return answer;
 }
