@@ -21,6 +21,7 @@ int solution(vector<vector<int>> board, vector<int> moves) {
     for(int i=0;i<moves.size();i++) {
         if(idx[moves[i]-1] != size) {
             basket.push_back(board[idx[moves[i]-1]][moves[i]-1]);
+            board[idx[moves[i]-1]][moves[i]-1] = 0;
             idx[moves[i]-1]++;
         }
         if(basket[basket.size()-1] == basket[basket.size()-2]) {
