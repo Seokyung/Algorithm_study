@@ -4,21 +4,18 @@ function solution(answers) {
     let std1_res = 0, std2_res = 0, std3_res = 0;
     
     for(let i = 0; i < answers.length; i++) {
-        if(answers[i] === std1[i%5]) {
+        if(answers[i] === std1[i%std1.length]) {
             std1_res++;
         }
-        if(answers[i] === std2[i%8]) {
+        if(answers[i] === std2[i%std2.length]) {
             std2_res++;
         }
-        if(answers[i] === std3[i%10]) {
+        if(answers[i] === std3[i%std3.length]) {
             std3_res++;
         }
     }
     
-    let max = std1_res > std2_res ? 
-        (std1_res > std3_res ? std1_res : std3_res)
-         : 
-         (std2_res > std3_res ? std2_res : std3_res);
+    let max = Math.max(std1_res, std2_res, std3_res);
     
     if(max === std1_res) {
         result.push(1);
