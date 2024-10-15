@@ -1,6 +1,6 @@
 function solution(targets) {
     let answer = 0;
-    const sortedTargets = targets.sort((a, b) => a[1] - b[1]);
+    const sortedTargets = targets.sort((a, b) => (a[1] - b[1]) || (a[0] - b[0]));
     let curRange = [-1, -1];
     
     for (let i = 0; i < sortedTargets.length; i++) {
