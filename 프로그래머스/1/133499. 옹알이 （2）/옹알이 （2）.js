@@ -22,3 +22,12 @@ function solution(babbling) {
     
     return answer;
 }
+
+// 정규표현식으로 풀기
+// function solution(babbling) {
+//     const regexp1 = /(aya|ye|woo|ma)\1+/;
+//     const regexp2 = /^(aya|ye|woo|ma)+$/;
+//     return babbling.reduce((acc, word) => (
+//         !regexp1.test(word) && regexp2.test(word) ? ++acc : acc
+//     ), 0);
+// }
