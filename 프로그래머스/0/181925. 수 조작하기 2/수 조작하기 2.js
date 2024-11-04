@@ -4,7 +4,7 @@ function solution(numLog) {
     const numMap = {"1": "w", "-1": "s", "10": "d", "-10": "a"};
     
     for (let i = 1; i < numLog.length; i++) {
-        answer += numMap[(numLog[i] - prevNum) + ""];
+        answer += numMap[String(numLog[i] - prevNum)];
         prevNum = numLog[i];
     }
     
