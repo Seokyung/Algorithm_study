@@ -1,4 +1,5 @@
 function solution(myStr) {
+    // for문을 사용하는 풀이
     let answer = [];
     myStr = myStr.split('a').filter((el) => el.length > 0);
     
@@ -10,4 +11,7 @@ function solution(myStr) {
     }
     
     return answer.length === 0 ? ['EMPTY'] : answer;
+    
+    // regExp를 사용하는 풀이
+    // return myStr.match(/[^a-c]+/g) || ['EMPTY'];
 }
